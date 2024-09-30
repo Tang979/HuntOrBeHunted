@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=dba4bf6ba6a454440ae3f2152a809de4&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/TerrainDemoScene_HDRP/Terrain/Data/Terrain_3_3_9b11d05b-b237-4de7-82ed-a402f9cedebd%201.asset?fileID=6378149370397660275&amp;guid=0c7476005817e1a44b58b85fdcc5e10f&amp;type=2#SplatAlpha 0&quot;);">
+        <ui:Label tabindex="-1" text="HuntOrBeHunted" parse-escape-sequences="true" display-tooltip-when-elided="true" class="header" />
+        <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="StartGameButton" class="button" style="width: 220px; height: 60px; justify-content: flex-start; align-self: center; font-size: 40px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;" />
+        <ui:Button text="Setting" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btnSetting" class="button" />
+        <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BtnQuit" class="button" />
+    </ui:VisualElement>
+</ui:UXML>
