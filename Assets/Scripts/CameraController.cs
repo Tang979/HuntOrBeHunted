@@ -15,12 +15,12 @@ public class Cameracontroller : MonoBehaviour
 
 	void Start()
 	{
-		EneableCamera("","");
+		EneableCamera("", "");
 	}
 
 	void Update()
 	{
-		if(isFirstPerson)
+		if (isFirstPerson)
 		{
 			ThirdPerson.Priority = 0;
 			FirstPerson.Priority = 1;
@@ -30,25 +30,21 @@ public class Cameracontroller : MonoBehaviour
 			ThirdPerson.Priority = 1;
 			FirstPerson.Priority = 0;
 		}
-		
-		// Kiểm tra khi người chơi nhấn chuột trái
-		if (Input.GetMouseButtonDown(0))
+
+		if (!isControllingCamera)
 		{
 			// Khóa và ẩn con trỏ chuột
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
 			isControllingCamera = true;
-			EneableCamera("Mouse X","Mouse Y");
+			EneableCamera("Mouse X", "Mouse Y");
 		}
 
-		if(!isControllingCamera)
-			return;
-		
 		// Kiểm tra khi người chơi nhấn ESC để dừng điều khiển camera
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			EneableCamera("", "");
-			ResetCamera(0,0);
+			ResetCamera(0, 0);
 			// Hiển thị lại con trỏ chuột và thả khóa
 			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;

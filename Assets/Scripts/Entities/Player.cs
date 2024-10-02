@@ -9,7 +9,6 @@ public class Player : Enitities
     Animator animator;
     public float gravity = 9.8f;
     public float sprintAdittion = 3.5f;
-    private float velocity = 5f;
     float jumpElapsedTime = 0;
 
     // Player states
@@ -78,9 +77,8 @@ public class Player : Enitities
         {
             isJumping = true;
             // Disable crounching when jumping
-            //isCrouching = false; 
+            isCrouching = false; 
         }
-
         HeadHittingDetect();
 
         
@@ -89,6 +87,7 @@ public class Player : Enitities
     void FixedUpdate()
     {
         Move();
+        Atack();
     }
     void HeadHittingDetect()
     {
@@ -113,11 +112,11 @@ public class Player : Enitities
         if ( isSprinting )
             velocityAdittion = sprintAdittion;
         if (isCrouching)
-            velocityAdittion =  - (velocity * 0.50f); // -50% velocity
+            velocityAdittion =  - (speed * 0.50f); // -50% velocity
 
         // Direction movement
-        float directionX = inputHorizontal * (velocity + velocityAdittion) * Time.deltaTime;
-        float directionZ = inputVertical * (velocity + velocityAdittion) * Time.deltaTime;
+        float directionX = inputHorizontal * (speed + velocityAdittion) * Time.deltaTime;
+        float directionZ = inputVertical * (speed + velocityAdittion) * Time.deltaTime;
         float directionY = 0;
 
         // Jump handler
@@ -173,6 +172,9 @@ public class Player : Enitities
 
     protected override void Atack()
     {
-        throw new System.NotImplementedException();
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetTrigger("attack");
+        }
     }
 }
