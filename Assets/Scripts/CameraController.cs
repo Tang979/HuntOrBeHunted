@@ -38,7 +38,7 @@ public class Cameracontroller : MonoBehaviour
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
 			isControllingCamera = true;
-			EneableCamera("Mouse X","Mouse Y");
+			EneableCamera("Mouse X", "Mouse Y");
 		}
 
 		if(!isControllingCamera)
