@@ -172,7 +172,7 @@ public class Player : Enitities
 
     protected override void Atack()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Cursor.visible == false)
         {
             animator.SetTrigger("attack");
         }

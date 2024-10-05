@@ -9,9 +9,12 @@ public class Cameracontroller : MonoBehaviour
 	public CinemachineFreeLook ThirdPerson; // Tham chiếu đến Cinemachine FreeLook Camera
 	public CinemachineVirtualCamera FirstPerson;
 
-
+	public GameObject inventory;
 	bool isFirstPerson = true;
 	private bool isControllingCamera = false;  // Biến kiểm tra trạng thái điều khiển camera
+	public Transform playerBody;  // Đối tượng nhân vật cần xoay cùng camera
+	public float mouseSensitivity = 100f;  // Độ nhạy của chuột
+	private float xRotation = 0f;  // Trục xoay X cho việc xoay camera theo chiều dọc
 
 	void Start()
 	{
@@ -31,16 +34,34 @@ public class Cameracontroller : MonoBehaviour
 			FirstPerson.Priority = 0;
 		}
 
-		if (!isControllingCamera)
+		if (Input.GetMouseButtonDown(0))
 		{
-			// Khóa và ẩn con trỏ chuột
+			EneableCamera("Mouse X", "Mouse Y");
+			// Hiển thị lại con trỏ chuột và thả khóa
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
 			isControllingCamera = true;
-			EneableCamera("Mouse X", "Mouse Y");
 		}
 
-		// Kiểm tra khi người chơi nhấn ESC để dừng điều khiển camera
+		if (!isControllingCamera)
+		{
+			EneableCamera("", "");
+			return;
+		}
+
+		if (isFirstPerson)
+		{
+			// Lấy hướng của Cinemachine Camera
+			Vector3 cameraForward = Camera.main.transform.forward; // Hướng nhìn của camera
+			Vector3 cameraRight = Camera.main.transform.right; // Hướng ngang của camera
+
+			// Tính toán hướng xoay cho nhân vật dựa trên góc quay của camera
+			Vector3 newForward = new Vector3(cameraForward.x, 0f, cameraForward.z).normalized;
+			playerBody.rotation = Quaternion.Slerp(playerBody.rotation, Quaternion.LookRotation(newForward), Time.deltaTime * 10f);
+
+			// Xoay camera theo chiều dọc (nếu cần)
+			transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+		}
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			EneableCamera("", "");
