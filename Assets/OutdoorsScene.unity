@@ -3451,7 +3451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf61c3978b55dc54094f46d441011aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryScreenUI: {fileID: 0}
+  inventoryScreenUI: {fileID: 1913256939}
   isOpen: 0
 --- !u!4 &919453004
 Transform:
@@ -5501,7 +5501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628228799}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0085486155, y: -0, z: -0, w: 0.99996346}
+  m_LocalRotation: {x: -0.008548616, y: -0, z: -0, w: 0.99996346}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
