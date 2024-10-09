@@ -15,15 +15,45 @@ public class Cameracontroller : MonoBehaviour
 	public Transform playerBody;  // Đối tượng nhân vật cần xoay cùng camera
 	public float mouseSensitivity = 100f;  // Độ nhạy của chuột
 	private float xRotation = 0f;  // Trục xoay X cho việc xoay camera theo chiều dọc
+    private bool isInventoryOpen = false;
 
-	void Start()
+    void Start()
 	{
 		EneableCamera("", "");
 	}
 
 	void Update()
 	{
-		if (isFirstPerson)
+        if (InventorySystem.Instance.isOpen)
+        {
+            isInventoryOpen = true;
+        }
+        else
+        {
+            isInventoryOpen = false;
+        }
+
+        // Nếu inventory đang mở thì ngừng điều khiển camera
+        if (isInventoryOpen)
+        {
+            EneableCamera("", "");
+            Cursor.lockState = CursorLockMode.None;  // Hiển thị con trỏ chuột
+            Cursor.visible = true;
+            isControllingCamera = false;
+
+            return;  // Dừng các thao tác camera khác
+        }
+        else if (!isInventoryOpen && !isControllingCamera)
+        {
+            // Khi InventorySystem đóng, tự động bật điều khiển camera mà không cần click
+            EneableCamera("Mouse X", "Mouse Y");
+            Cursor.lockState = CursorLockMode.Locked;  // Ẩn con trỏ chuột
+            Cursor.visible = false;
+            isControllingCamera = true;
+        }
+
+        // Các xử lý điều khiển camera khi inventory đóng
+        if (isFirstPerson)
 		{
 			ThirdPerson.Priority = 0;
 			FirstPerson.Priority = 1;

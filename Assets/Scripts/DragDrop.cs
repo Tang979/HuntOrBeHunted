@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
 
-    [SerializeField] private Canvas canvas;
+    /*[SerializeField] private Canvas canvas;*/
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
@@ -45,7 +45,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         //So the item will move with our mouse (at same speed)  and so it will be consistant if the canvas has a different scale (other then 1);
         rectTransform.anchoredPosition += eventData.delta;
 
-    }
+    }   
 
 
 
