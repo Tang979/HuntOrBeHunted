@@ -1,7 +1,7 @@
 ﻿
-using UnityEditor.VersionControl;
+//using UnityEditor.VersionControl;
 using UnityEngine;
-
+using Unity.Netcode;
 /*
     This file has a commented version with details about how each line works. 
     The commented version contains code that is easier and simpler to read. This file is minified.
@@ -13,7 +13,7 @@ using UnityEngine;
 /// Make sure that the object that will receive this script (the player) 
 /// has the Player tag and the Character Controller component.
 /// </summary>
-public class ThirdPersonController : MonoBehaviour
+public class ThirdPersonController : NetworkBehaviour
 {
 
     [Tooltip("Speed ​​at which the character moves. It is not affected by gravity or jumping.")]
@@ -60,7 +60,7 @@ public class ThirdPersonController : MonoBehaviour
     // Update is only being used here to identify keys and trigger animations
     void Update()
     {
-
+        if (!IsOwner) return;
         // Input checkers
         inputHorizontal = Input.GetAxis("Horizontal");
         inputVertical = Input.GetAxis("Vertical");
