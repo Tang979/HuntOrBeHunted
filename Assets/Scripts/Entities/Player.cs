@@ -7,11 +7,8 @@ using UnityEngine;
 public class Player : Enitities
 {
     private Rigidbody rigidbody;
-    private Vector3 playerMovement;
     public float groundCheckDistance = 0.2f; // Khoảng cách kiểm tra va chạm với mặt đất
-    private FootIK footIK;
     public LayerMask groundLayer; // Layer xác định các đối tượng được coi là mặt đất
-    private bool isGrounded;
     
     Animator animator;
     CharacterController cc;
@@ -37,7 +34,6 @@ public class Player : Enitities
         cc = GetComponent<CharacterController>();
         rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-        footIK = GetComponent<FootIK>();
 
         // Message informing the user that they forgot to add an animator
         if (animator == null)
@@ -104,7 +100,7 @@ public class Player : Enitities
         // Sprinting velocity boost or crounching desacelerate
         float velocityAdittion = 0;
         if ( isSprinting )
-            velocityAdittion = sprintAdittion;
+            velocityAdittion = speed*sprintAdittion;
         if (isCrouching)
             velocityAdittion =  - (speed * 0.50f); // -50% velocity
 

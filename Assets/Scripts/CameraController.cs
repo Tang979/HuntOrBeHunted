@@ -10,7 +10,7 @@ public class Cameracontroller : MonoBehaviour
 	public CinemachineVirtualCamera FirstPerson;
 
 	public GameObject inventory;
-	bool isFirstPerson = true;
+	public bool isFirstPerson;
 	private bool isControllingCamera = false;  // Biến kiểm tra trạng thái điều khiển camera
 	public Transform playerBody;  // Đối tượng nhân vật cần xoay cùng camera
 	public float mouseSensitivity = 100f;  // Độ nhạy của chuột

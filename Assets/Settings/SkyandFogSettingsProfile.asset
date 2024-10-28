@@ -157,7 +157,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 2500
   elevationTransition:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1000
   numLevelOfDetails:
     m_OverrideState: 0
