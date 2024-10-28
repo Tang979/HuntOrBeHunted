@@ -1,15 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using HoaxGames;
 using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Player : Enitities
 {
-    CharacterController controller;
+    private Rigidbody rigidbody;
+    private Vector3 playerMovement;
+    public float groundCheckDistance = 0.2f; // Khoảng cách kiểm tra va chạm với mặt đất
+    private FootIK footIK;
+    public LayerMask groundLayer; // Layer xác định các đối tượng được coi là mặt đất
+    private bool isGrounded;
+    
     Animator animator;
+    CharacterController cc;
     public float gravity = 9.8f;
     public float sprintAdittion = 3.5f;
-    float jumpElapsedTime = 0;
+    float jumpElapsedTime = 0.85f;
 
     // Player states
     bool isJumping = false;
@@ -26,8 +34,10 @@ public class Player : Enitities
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        cc = GetComponent<CharacterController>();
+        rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        footIK = GetComponent<FootIK>();
 
         // Message informing the user that they forgot to add an animator
         if (animator == null)
@@ -51,7 +61,7 @@ public class Player : Enitities
 
         // Run and Crouch animation
         // If dont have animator component, this block wont run
-        if ( controller.isGrounded && animator != null )
+        if ( cc.isGrounded && animator != null )
         {
 
             // Crouch
@@ -60,49 +70,33 @@ public class Player : Enitities
             
             // Run
             float minimumSpeed = 0.9f;
-            animator.SetBool("run", controller.velocity.magnitude > minimumSpeed );
+            animator.SetBool("run", cc.velocity.magnitude > minimumSpeed );
 
             // Sprint
-            isSprinting = controller.velocity.magnitude > minimumSpeed && inputSprint;
+            isSprinting = cc.velocity.magnitude > minimumSpeed && inputSprint;
             animator.SetBool("sprint", isSprinting );
 
         }
 
         // Jump animation
         if( animator != null )
-            animator.SetBool("air", controller.isGrounded == false );
+            animator.SetBool("air", cc.isGrounded == false );
 
         // Handle can jump or not
-        if ( inputJump && controller.isGrounded )
+        if ( inputJump && cc.isGrounded )
         {
             isJumping = true;
             // Disable crounching when jumping
-            isCrouching = false; 
+            //isCrouching = false; 
         }
-        HeadHittingDetect();
 
-        
+        HeadHittingDetect();
     }
 
     void FixedUpdate()
     {
         Move();
         Atack();
-    }
-    void HeadHittingDetect()
-    {
-        float headHitDistance = 1.1f;
-        Vector3 controllerCenter = transform.TransformPoint(controller.center);
-        float hitCalc = controller.height / 2f * headHitDistance;
-
-        // Uncomment this line to see the Ray drawed in your characters head
-        // Debug.DrawRay(controllerCenter, Vector3.up * headHeight, Color.red);
-
-        if (Physics.Raycast(controllerCenter, Vector3.up, hitCalc))
-        {
-            jumpElapsedTime = 0;
-            isJumping = false;
-        }
     }
 
     protected override void Move()
@@ -122,6 +116,7 @@ public class Player : Enitities
         // Jump handler
         if ( isJumping )
         {
+
             // Apply inertia and smoothness when climbing the jump
             // It is not necessary when descending, as gravity itself will gradually pulls
             directionY = Mathf.SmoothStep(jumpForce, jumpForce * 0.30f, jumpElapsedTime / jumpTime) * Time.deltaTime;
@@ -140,6 +135,7 @@ public class Player : Enitities
 
         
         // --- Character rotation --- 
+
         Vector3 forward = Camera.main.transform.forward;
         Vector3 right = Camera.main.transform.right;
 
@@ -167,7 +163,7 @@ public class Player : Enitities
         Vector3 horizontalDirection = forward + right;
 
         Vector3 moviment = verticalDirection + horizontalDirection;
-        controller.Move( moviment );
+        cc.Move( moviment );
     }
 
     protected override void Atack()
@@ -175,6 +171,23 @@ public class Player : Enitities
         if (Input.GetMouseButtonDown(0) && Cursor.visible == false)
         {
             animator.SetTrigger("attack");
+        }
+    }
+
+    //This function makes the character end his jump if he hits his head on something
+    void HeadHittingDetect()
+    {
+        float headHitDistance = 1.1f;
+        Vector3 ccCenter = transform.TransformPoint(cc.center);
+        float hitCalc = cc.height / 2f * headHitDistance;
+
+        // Uncomment this line to see the Ray drawed in your characters head
+        // Debug.DrawRay(ccCenter, Vector3.up * headHeight, Color.red);
+
+        if (Physics.Raycast(ccCenter, Vector3.up, hitCalc))
+        {
+            jumpElapsedTime = 0;
+            isJumping = false;
         }
     }
 }

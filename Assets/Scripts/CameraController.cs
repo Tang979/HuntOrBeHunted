@@ -62,7 +62,7 @@ public class Cameracontroller : MonoBehaviour
 			// Xoay camera theo chiều dọc (nếu cần)
 			transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 		}
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetButtonDown("Cancel"))
 		{
 			EneableCamera("", "");
 			ResetCamera(0, 0);
