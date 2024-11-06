@@ -3,31 +3,30 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - ground
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - ground
+  - 
   - Water
   - UI
-  - player
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PostProcessOverlay
+  - IgnoreCharacter
+  - ThirdPerson
+  - FirstPerson
+  - PostProcessWorld
+  - Buildable
+  - BuildablePreview
+  - Ragdoll
+  - Hitbox
+  - Character
+  - Ground
+  - CharacterPreview
+  - IgnoreCollisions
+  - CharacterTrigger
   - 
   - 
   - 

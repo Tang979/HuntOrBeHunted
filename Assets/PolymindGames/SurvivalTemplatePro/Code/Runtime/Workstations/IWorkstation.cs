@@ -1,0 +1,10 @@
+using PolymindGames.InventorySystem;
+
+namespace PolymindGames
+{
+    public interface IWorkstation
+    {
+        string WorkstationName { get; }
+        IItemContainer[] GetContainers();
+    }
+}

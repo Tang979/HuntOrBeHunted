@@ -24,8 +24,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Pine_C_Bark
-  m_Shader: {fileID: -6465566751694194690, guid: 83570b22fac1fa042ac163344f72821c,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 83570b22fac1fa042ac163344f72821c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -46,7 +45,6 @@ Material:
   - TransparentDepthPostpass
   - TransparentBackface
   - RayTracingPrepass
-  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
