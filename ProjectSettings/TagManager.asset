@@ -12,21 +12,21 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - PostProcessOverlay
-  - IgnoreCharacter
-  - ThirdPerson
-  - FirstPerson
-  - PostProcessWorld
-  - Buildable
-  - BuildablePreview
-  - Ragdoll
+  - Effect
+  - TriggerZone
+  - Interactable
+  - ViewModel
+  - PostProcessing
   - Hitbox
   - Character
-  - Ground
-  - CharacterPreview
-  - IgnoreCollisions
-  - CharacterTrigger
+  - StaticObject
+  - DynamicObject
+  - Structure
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
