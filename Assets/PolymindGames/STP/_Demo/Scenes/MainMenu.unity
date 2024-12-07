@@ -3680,8 +3680,8 @@ MonoBehaviour:
   headlessStartMode: 0
   editorAutoStart: 0
   sendRate: 60
-  offlineScene: 
-  onlineScene: 
+  offlineScene: Assets/PolymindGames/STP/_Demo/Scenes/MainMenu.unity
+  onlineScene: Assets/PolymindGames/STP/_Demo/Scenes/Showcase.unity
   offlineSceneLoadDelay: 0
   transport: {fileID: 1276480512}
   networkAddress: localhost
