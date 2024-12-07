@@ -40,12 +40,12 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 7bd82e979d513a64eb6bb75bcf2b5c30, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _DISABLE_DECALS
   - _DISABLE_SSR_TRANSPARENT
   - _ENABLE_FOG_ON_TRANSPARENT
   - _SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords: []
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -135,7 +135,7 @@ Material:
     - _AlphaSrcBlend: 1
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
-    - _BUILTIN_QueueControl: -1
+    - _BUILTIN_QueueControl: 1
     - _BUILTIN_QueueOffset: 0
     - _BlendMode: 0
     - _BumpScale: 1
@@ -205,12 +205,12 @@ Material:
     - _ZWrite: 0
     - __dirty: 1
     m_Colors:
-    - _Base_Color: {r: 1, g: 0.06666667, b: 0, a: 0.39215687}
+    - _Base_Color: {r: 1, g: 0.06666667, b: 0, a: 0.5882353}
     - _Color: {r: 1, g: 0.06779656, b: 0, a: 0.39215687}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Fresnel: {r: 1.0592737, g: 0.88180375, b: 0.83743626, a: 1}
     - _Fresnel_Color: {r: 1.0592737, g: 0.88180375, b: 0.83743626, a: 1}
     - _LineColor: {r: 2.191883, g: 3.5471697, b: 3.5471697, a: 1}
-    - _Line_Color: {r: 2.996078, g: 1.8666663, b: 1.8887844, a: 0.9372549}
+    - _Line_Color: {r: 0.28557375, g: 0.044452522, b: 0.051150307, a: 0.9372549}
   m_BuildTextureStacks: []
