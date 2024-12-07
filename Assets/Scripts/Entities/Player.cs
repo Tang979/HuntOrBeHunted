@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using HoaxGames;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : Enitities
 {
     private Rigidbody rigidbody;
-    public float groundCheckDistance = 0.2f; // Khoảng cách kiểm tra va chạm với mặt đất
-    public LayerMask groundLayer; // Layer xác định các đối tượng được coi là mặt đất
+    private InputActionReference inputAction;
     
     Animator animator;
     CharacterController cc;
@@ -34,6 +33,7 @@ public class Player : Enitities
         cc = GetComponent<CharacterController>();
         rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        inputAction = new InputActionReference();
 
         // Message informing the user that they forgot to add an animator
         if (animator == null)
@@ -44,10 +44,10 @@ public class Player : Enitities
     void Update()
     {
         // Input checkers
-        inputHorizontal = Input.GetAxis("Horizontal");
-        inputVertical = Input.GetAxis("Vertical");
-        inputJump = Input.GetAxis("Jump") == 1f;
-        inputSprint = Input.GetAxis("Fire3") == 1f;
+        // inputHorizontal = Input.GetAxis("Horizontal");
+        // inputVertical = Input.GetAxis("Vertical");
+        // inputJump = Input.GetAxis("Jump") == 1f;
+        // inputSprint = Input.GetAxis("Fire3") == 1f;
         // Unfortunately GetAxis does not work with GetKeyDown, so inputs must be taken individually
         inputCrouch = Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.JoystickButton1);
 
