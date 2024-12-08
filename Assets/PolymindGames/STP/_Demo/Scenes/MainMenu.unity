@@ -3689,7 +3689,7 @@ MonoBehaviour:
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 125163817683932093, guid: d79e38103510cf749bedbce89e00036c, type: 3}
+  playerPrefab: {fileID: 1596043702583646337, guid: 08d9f6ef609dd624399ff62fbef130ce, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
@@ -5909,10 +5909,6 @@ PrefabInstance:
     - target: {fileID: 304759594847838159, guid: 10becd3684315804faa795835a1f911d, type: 3}
       propertyPath: m_Name
       value: Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 304759594847838159, guid: 10becd3684315804faa795835a1f911d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3072422173036765721, guid: 10becd3684315804faa795835a1f911d, type: 3}
       propertyPath: m_LocalPosition.x

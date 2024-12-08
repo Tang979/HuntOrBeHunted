@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 343597660216459648}
   - component: {fileID: 3483316168763309600}
   - component: {fileID: 1815306085203962273}
-  - component: {fileID: 7470090917308052360}
   m_Layer: 13
   m_Name: Camera_FPSPlayer
   m_TagString: MainCamera
@@ -223,15 +222,3 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304759594847838159}
   m_Enabled: 1
---- !u!114 &7470090917308052360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304759594847838159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9846a26c416a0b04d8df8221ce229995, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
