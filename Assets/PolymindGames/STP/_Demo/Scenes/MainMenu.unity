@@ -3640,12 +3640,26 @@ MonoBehaviour:
   RecvBufferSize: 7361536
   SendBufferSize: 7361536
   FastResend: 2
+  CongestionWindow: 0
   ReceiveWindowSize: 4096
   SendWindowSize: 4096
   MaxRetransmit: 40
   MaximizeSocketBuffers: 1
   ReliableMaxMessageSize: 297433
   UnreliableMaxMessageSize: 1194
+  config:
+    DualMode: 0
+    RecvBufferSize: 0
+    SendBufferSize: 0
+    Mtu: 0
+    NoDelay: 0
+    Interval: 0
+    FastResend: 0
+    CongestionWindow: 0
+    SendWindowSize: 0
+    ReceiveWindowSize: 0
+    Timeout: 0
+    MaxRetransmits: 0
   debugLog: 1
   statisticsGUI: 0
   statisticsLog: 0
@@ -3661,6 +3675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   offsetX: 0
   offsetY: 0
 --- !u!114 &1276480514
@@ -3689,7 +3704,7 @@ MonoBehaviour:
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 1596043702583646337, guid: 08d9f6ef609dd624399ff62fbef130ce, type: 3}
+  playerPrefab: {fileID: 8841180950037204938, guid: 831aa12fd68a23b42918d1025cc60870, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
@@ -3708,6 +3723,10 @@ MonoBehaviour:
   evaluationMethod: 0
   evaluationInterval: 3
   timeInterpolationGui: 0
+  clientLoadedScene: 0
+  <mode>k__BackingField: 0
+  finishStartHostPending: 0
+  clientSceneOperation: 0
 --- !u!1 &1299094285
 GameObject:
   m_ObjectHideFlags: 0
