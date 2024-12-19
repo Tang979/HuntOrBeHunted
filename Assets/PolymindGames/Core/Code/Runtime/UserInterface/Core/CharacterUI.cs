@@ -113,7 +113,6 @@ namespace PolymindGames.UserInterface
                     break;
                 case AttachMode.ToChildCharacter:
                     character = GetComponentInChildren<ICharacter>();
-                    Debug.Log("ToChildCharacter");
                     break;
             }
 

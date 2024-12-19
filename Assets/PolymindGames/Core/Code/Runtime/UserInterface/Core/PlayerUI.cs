@@ -7,6 +7,7 @@ namespace PolymindGames.UserInterface
     {
         public static PlayerUI LocalUI { get; private set; }
 
+
         private void Awake()
         {
             if (LocalUI != null)

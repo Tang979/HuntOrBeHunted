@@ -929,10 +929,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2586751855334420569, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -30.942505
-      objectReference: {fileID: 0}
     - target: {fileID: 2712072696260498937, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1841,10 +1837,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7735447869740724185, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8118924102970400384, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1888,10 +1880,6 @@ PrefabInstance:
     - target: {fileID: 8426793883584323195, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
       propertyPath: m_Name
       value: UI_Inventory
-      objectReference: {fileID: 0}
-    - target: {fileID: 8426793883584323195, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8486908787787912520, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2139,10 +2127,6 @@ PrefabInstance:
     - target: {fileID: 972659401471940729, guid: 464476454d9f4e14db3d192020258eb9, type: 3}
       propertyPath: m_Name
       value: UI_FPSCounter
-      objectReference: {fileID: 0}
-    - target: {fileID: 972659401471940729, guid: 464476454d9f4e14db3d192020258eb9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5923667404891029965, guid: 464476454d9f4e14db3d192020258eb9, type: 3}
       propertyPath: m_Pivot.x
