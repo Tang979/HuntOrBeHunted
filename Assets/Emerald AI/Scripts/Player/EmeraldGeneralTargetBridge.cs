@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using EmeraldAI.Utility;
+using PolymindGames;
 
 namespace EmeraldAI
 {
@@ -20,6 +21,8 @@ namespace EmeraldAI
         public bool HealthSettingsFoldout = true;
 
         public int StartHealth { get => StartingHealth; set => StartingHealth = value; }
+
+        public CharacterHitbox characterHitbox;
         [field: SerializeField] public int Health { get; set; }
         [field: SerializeField] public List<string> ActiveEffects { get; set; }
 
@@ -28,6 +31,8 @@ namespace EmeraldAI
 
         void Start()
         {
+            characterHitbox = GetComponentInParent<CharacterHitbox>();
+            StartingHealth = (int)characterHitbox.Character.HealthManager.MaxHealth;
             Health = StartingHealth;
             m_TargetPositionModifier = GetComponent<TargetPositionModifier>();
             m_Collider = GetComponent<Collider>();
@@ -62,6 +67,12 @@ namespace EmeraldAI
             if (Immortal) return;
 
             Health -= DamageAmount;
+            if(characterHitbox!=null)
+            {
+                Vector3 pos = Target.position;
+                DamageArgs args = new(DamageType.Cut, pos, (pos - characterHitbox.Character.transform.position).normalized * 5);
+                characterHitbox.Character.HealthManager.ReceiveDamage(DamageAmount, args);
+            }
             OnTakeDamage.Invoke();
 
             if (Health <= 0)

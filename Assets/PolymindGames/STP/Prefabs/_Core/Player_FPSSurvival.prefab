@@ -1037,7 +1037,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6175718928473083354}
   m_Father: {fileID: 459230166078585831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &5909794755468261739
@@ -1615,7 +1616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8841180950037204948}
+  m_Father: {fileID: 7261880800107158901}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2581347613128023294
 MeshFilter:
@@ -1746,6 +1747,7 @@ MonoBehaviour:
   DebugLogDeath: 1
   HideSettingsFoldout: 0
   HealthSettingsFoldout: 1
+  characterHitbox: {fileID: 0}
   <Health>k__BackingField: 100
   <ActiveEffects>k__BackingField: []
 --- !u!1 &6735823077587768323
@@ -2562,7 +2564,6 @@ Transform:
   m_Children:
   - {fileID: 8087760332472427605}
   - {fileID: 459230166078585831}
-  - {fileID: 6175718928473083354}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &8841180950037204947
