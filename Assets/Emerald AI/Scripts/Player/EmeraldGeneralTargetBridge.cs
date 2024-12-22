@@ -38,6 +38,11 @@ namespace EmeraldAI
             m_Collider = GetComponent<Collider>();
         }
 
+        void Update()
+        {
+            Health = (int)characterHitbox.Character.HealthManager.Health;
+        }
+
         public void Damage(int DamageAmount, Transform AttackerTransform = null, int RagdollForce = 100, bool CriticalHit = false)
         {
             DefaultDamage(DamageAmount, AttackerTransform);
