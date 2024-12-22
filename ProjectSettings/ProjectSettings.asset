@@ -776,11 +776,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: a874fb79-792a-4bec-9dff-74a20b97f423
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Untitled Horror Game
-  organizationId: 
+  projectName: HuntOrBeHunted 2024-12-20_19-17-07
+  organizationId: tuankhoa54
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

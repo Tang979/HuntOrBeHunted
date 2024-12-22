@@ -17,4 +17,4 @@ MonoBehaviour:
   _engagedPrefab: {fileID: 3860972344484012860, guid: e91908fc1c02484479000cdef355b760, type: 3}
   _respawnDays: 1
   _gatherOffset: {x: -0.04, y: 0.6, z: 0.02}
-  _gatherRadius: 0.35
+  _gatherRadius: 0.4
