@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8562356225674723501}
   - component: {fileID: 7459473128866387794}
   - component: {fileID: 509726931}
-  - component: {fileID: 884575882764098339}
   - component: {fileID: -4342429174584670559}
   - component: {fileID: 2311799093037464086}
   - component: {fileID: 565451375115332454}
@@ -104,22 +103,6 @@ MonoBehaviour:
   _hungerRestore: {x: 15, y: 20}
   _thirstRestore: {x: 5, y: 10}
   _consumeAudio: {fileID: 11400000, guid: faa6db61708835d4fbd52fc713bd3aca, type: 2}
---- !u!208 &884575882764098339
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5882697173726341410}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!114 &-4342429174584670559
 MonoBehaviour:
   m_ObjectHideFlags: 0

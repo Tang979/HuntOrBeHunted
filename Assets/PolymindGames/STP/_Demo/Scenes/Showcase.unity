@@ -1657,6 +1657,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6420426384884959978, guid: e26a3b275e0497344a72be9a7a921b59, type: 3}
+      propertyPath: m_Name
+      value: BuildingPiece_Anvil_Constructed
+      objectReference: {fileID: 0}
     - target: {fileID: 7092161820356522466, guid: e26a3b275e0497344a72be9a7a921b59, type: 3}
       propertyPath: _instanceGuid._guidPart1
       value: -641483908
@@ -4334,7 +4338,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 1
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: c7e019220824d9141ae1db1539ff1898, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 038051203cf1c3142bb7b368c05ee17a, type: 2}
   m_BuildHeightMesh: 1
 --- !u!4 &185118953
 Transform:
@@ -11252,6 +11256,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2492984614996429670, guid: 77980c72544177c49952a7362ab650c5, type: 3}
+      propertyPath: m_Name
+      value: BuildingPIece_SleepingBag_Constructed
+      objectReference: {fileID: 0}
     - target: {fileID: 2951188238211572913, guid: 77980c72544177c49952a7362ab650c5, type: 3}
       propertyPath: _instanceGuid._guidPart1
       value: -918327724
@@ -11776,6 +11784,10 @@ PrefabInstance:
       propertyPath: _instanceGuid._guidPart4
       value: -696705479
       objectReference: {fileID: 0}
+    - target: {fileID: 9176242279885658657, guid: 63ecd73ad08fca64ea5f68155b4a9356, type: 3}
+      propertyPath: m_Name
+      value: BuildingPIece_MetalCrate_Constructed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11980,6 +11992,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8120275775258616101, guid: 8c135c226e446f94d913380bbd19f88f, type: 3}
   m_PrefabInstance: {fileID: 508091342}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &511427817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5006834382391181690, guid: 5f31a3987a3fe344ba2cea93357e97dc, type: 3}
+  m_PrefabInstance: {fileID: 2061616182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &513644850 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1496186373679790453, guid: 77980c72544177c49952a7362ab650c5, type: 3}
@@ -21102,6 +21125,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825417818}
     m_Modifications:
+    - target: {fileID: 6302778399110244682, guid: 3e9ebff1791be56449d061b8e4dfef8f, type: 3}
+      propertyPath: m_Name
+      value: BuildingPIece_StorageCrate_Constructed
+      objectReference: {fileID: 0}
     - target: {fileID: 6302778399110673770, guid: 3e9ebff1791be56449d061b8e4dfef8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.04199961
@@ -45052,6 +45079,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7767864447874461502, guid: 52552dc75808b8243815a8fc34f25912, type: 3}
+      propertyPath: m_Name
+      value: BuildingPiece_Workbench_Constructed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45268,9 +45299,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825417818}
     m_Modifications:
+    - target: {fileID: 4697932588837773189, guid: 5f31a3987a3fe344ba2cea93357e97dc, type: 3}
+      propertyPath: m_Name
+      value: BuildingPIece_StandingTorch_Constructed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006834382391181690, guid: 5f31a3987a3fe344ba2cea93357e97dc, type: 3}
+      propertyPath: m_Intensity
+      value: 2250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162327261843168421, guid: 5f31a3987a3fe344ba2cea93357e97dc, type: 3}
+      propertyPath: _lightData
+      value: 
+      objectReference: {fileID: 511427817}
     - target: {fileID: 8020524148779326377, guid: 5f31a3987a3fe344ba2cea93357e97dc, type: 3}
       propertyPath: m_Intensity
-      value: 59.6831
+      value: 179.0493
       objectReference: {fileID: 0}
     - target: {fileID: 8604462526916128150, guid: 5f31a3987a3fe344ba2cea93357e97dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46992,6 +47035,10 @@ PrefabInstance:
     - target: {fileID: 403451810173623399, guid: b16ff59392c3ee445a9432bfcafb8e0c, type: 3}
       propertyPath: m_Name
       value: Achates
+      objectReference: {fileID: 0}
+    - target: {fileID: 403451810173623399, guid: b16ff59392c3ee445a9432bfcafb8e0c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1068067675056588509, guid: b16ff59392c3ee445a9432bfcafb8e0c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49817,10 +49864,6 @@ PrefabInstance:
     - target: {fileID: 875472753624856727, guid: 72f09eea24cef9745ad9568dc74d4933, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7475497208865484772, guid: 72f09eea24cef9745ad9568dc74d4933, type: 3}
-      propertyPath: m_Intensity
-      value: 59.6831
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

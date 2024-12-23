@@ -31,7 +31,7 @@ namespace EmeraldAI
 
         void Start()
         {
-            characterHitbox = GetComponentInParent<CharacterHitbox>();
+            characterHitbox = GetComponent<CharacterHitbox>();
             StartingHealth = (int)characterHitbox.Character.HealthManager.MaxHealth;
             Health = StartingHealth;
             m_TargetPositionModifier = GetComponent<TargetPositionModifier>();

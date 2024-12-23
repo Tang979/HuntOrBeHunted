@@ -60,7 +60,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildingPIece_Log_Platform_Constructed
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8182448928079654729, guid: f67592f8713c19942a2a9fe137818967, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
